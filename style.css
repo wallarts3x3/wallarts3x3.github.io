@@ -1,75 +1,172 @@
-    @font-face {
-                    font-family: alegreyaSans;
-                    src: url(fonts/AlegreyaSans.ttf);
-        }
-    
-
- body {
-            /*margin-left: 50%;*/
-          
-            text-align: center;
-            font-size: 200%;
-            background-color:#000000;
-            color: #ffffff; 
-            font-family: "alegreyaSans", serif;
-            border-style: solid;
-            border-color: #ffffff;
-            border-width: 20px;
-        }
-
-.lgo{
-            cursor: url('image/poke.png'), auto;
-            
-        }
-.lgoo{
-            cursor: url('image/weedle.png'), auto;
-            
-        }
-
-.bkgrnd {   
-            background-image: url(image/spaceBkgrnd.png);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center;
-        }
-
-.bkgrndTwo {
-            background-image: url(image/birds.png);
-            background-repeat: no-repeat;
-            background-size: 40%;
-            background-position: center;
-    }
-
-.imgSize{
-            width: 45%;
-            height: 45%;
-    }
-
-
-      [class*="col-"] {
-            float: left;
+.sections {
            
-            overflow: hidden;
+            max-width: 100%;
+            height: 50%;
+            display: block;
+            padding: 25px;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+            overflow: auto;
         }
 
-        .col-1 {width: 8.33%;}
-        .col-2 {width: 16.66%;}
-        .col-3 {width: 25%;}
-        .col-4 {width: 33.33%;}
-        .col-5 {width: 41.66%;}
-        .col-6 {width: 50%;}
-        .col-7 {width: 58.33%;}
-        .col-8 {width: 66.66%;}
-        .col-9 {width: 75%;}
-        .col-10 {width: 83.33%;}
-        .col-11 {width: 91.66%;}
-        .col-12 {width: 100%;}
+body {
+  margin: 0;
+    overflow-x:hidden;
+    
+    text-align: center;
+}
 
-        .row::after {
-          content: ""; /* there will be no content after each row - try deleting this property or inserting some text to see what happens*/ 
-          clear: both; /* BOTH sides of the element will be CLEAR - nothing can appear there*/
-          display: table;/*makes the elements appear as a grid - ie the squares in a horizontal row will remain the same height*/
-        }
+
+* {
+  box-sizing: border-box;
+}
+
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  
+  margin: auto;
+  padding: 0;
+  width: 60%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: ;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.brightness {
+
+
+}
+.brightness img:hover {
+    border-style: solid;
+            border-color: #012118;
+            border-width: 5px;
+        opacity: .5;
+}
 
 
         @media only screen and (max-width: 1080px) {
@@ -83,3 +180,4 @@
             }
             
         }
+
